@@ -1,0 +1,12 @@
+@font-face {
+	font-family: 'Fira';
+	src: url('/font.ttf');
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: 'Fira';
+}
