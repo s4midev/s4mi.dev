@@ -23,7 +23,7 @@ function App() {
 			</div>
 			<canvas
 				ref={cvRef}
-				className="w-screen h-screen fixed z-10"
+				className="w-screen h-screen fixed z-10 pointer-events-none"
 				style={{
 					imageRendering: 'pixelated',
 				}}

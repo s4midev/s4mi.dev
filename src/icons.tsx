@@ -3,6 +3,11 @@ import React from 'react';
 
 export function LinkIcon({ icon, url }) {
 	return (
-        <Icon icon={icon} height={34} width={34} className='h-fit cursor-pointer'/>
-    )
+		<div
+			className="h-fit w-fit cursor-pointer"
+			onClick={() => window.open(url, '_blank')}
+		>
+			<Icon icon={icon} height={34} width={34} />
+		</div>
+	);
 }
