@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -32,7 +31,7 @@ function App() {
 
 		let rev = false;
 
-		const pixelScale = 19;
+		const pixelScale = 20;
 
 		cvRef.current.width = window.innerWidth / pixelScale;
 		cvRef.current.height = window.innerHeight / pixelScale;
@@ -46,8 +45,17 @@ function App() {
 
 		ctx.imageSmoothingEnabled = false;
 
+		const bgPx = ctx.createImageData(1, 1);
+
+		bgPx.data[0] = 30;
+		bgPx.data[1] = 30;
+		bgPx.data[2] = 46;
+		bgPx.data[3] = 255;
+
 		ctx.fillStyle = '#1e1e2e';
 		ctx.fillRect(0, 0, cvRef.current.width, cvRef.current.height);
+
+		let last: number[][] = [];
 
 		const snakeGrow = () => {
 			const data = ctx.createImageData(1, 1);
@@ -58,6 +66,13 @@ function App() {
 			data.data[1] = col[1];
 			data.data[2] = col[2];
 			data.data[3] = 255;
+
+			last.push([x, y]);
+
+			if (last.length >= 10) {
+				ctx.putImageData(bgPx, last[0][0], last[0][1]);
+				last = last.slice(1);
+			}
 
 			ctx.putImageData(data, x, y);
 
@@ -77,11 +92,11 @@ function App() {
 
 				let needsReprocess = false;
 
-				if (newY >= cvRef.current.height  || newY <= -1 ) {
+				if (newY >= cvRef.current.height || newY <= -1) {
 					dir[0] *= -1;
 					needsReprocess = true;
 				}
-			
+
 				if (newX >= cvRef.current.width || newX <= -1) {
 					dir[1] *= -1;
 					needsReprocess = true;
@@ -97,20 +112,22 @@ function App() {
 
 			move();
 			snakeGrow();
-		}, 20);
+		}, 50);
 	}, []);
 
 	return (
 		<div className="text-ctp-text text-3xl flex items-center justify-center min-h-screen w-screen">
-			<div className="w-fit h-fit bg-ctp-mantle bg-opacity-50 backdrop-blur-3xl m-24 flex flex-col gap-6 items-center justify-center rounded-lg p-10">
+			<div className="w-fit h-fit bg-ctp-mantle bg-opacity-50 backdrop-blur-2xl m-24 flex flex-col gap-6 items-center justify-center rounded-lg p-10">
 				<h1>I'm s4mi, I make things (badly)</h1>
-				<h1 className='text-2xl'>im gonna add something here soon im promise</h1>
+				<h1 className="text-2xl">
+					im gonna add something here soon im promise
+				</h1>
 			</div>
 			<canvas
 				ref={cvRef}
 				className="w-screen h-screen fixed -z-10"
 				style={{
-					imageRendering: 'pixelated'
+					imageRendering: 'pixelated',
 				}}
 			/>
 		</div>
