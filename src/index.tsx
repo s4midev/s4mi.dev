@@ -32,7 +32,7 @@ function App() {
 
 		let rev = false;
 
-		const pixelScale = 25;
+		const pixelScale = 19;
 
 		cvRef.current.width = window.innerWidth / pixelScale;
 		cvRef.current.height = window.innerHeight / pixelScale;
@@ -97,7 +97,7 @@ function App() {
 
 			move();
 			snakeGrow();
-		}, 25);
+		}, 20);
 	}, []);
 
 	return (

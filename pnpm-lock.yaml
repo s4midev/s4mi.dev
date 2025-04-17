@@ -11,9 +11,6 @@ importers:
       '@catppuccin/tailwindcss':
         specifier: ^0.1.6
         version: 0.1.6(tailwindcss@3.4.12)
-      '@types/animejs':
-        specifier: ^3.1.12
-        version: 3.1.12
       '@vitejs/plugin-react':
         specifier: ^4.3.1
         version: 4.3.1(vite@5.4.7)
@@ -565,9 +562,6 @@ packages:
     resolution: {integrity: sha512-Yy8So+SoRz8I3NS4Bjh91BICPOSVgdompTIPYTByUqU66AXSIOgmW3Lv1ke3NORPqxdF+RdrZET+8vYai6f4aA==}
     cpu: [x64]
     os: [win32]
-
-  '@types/animejs@3.1.12':
-    resolution: {integrity: sha512-fpdH+ZtlO0kqjTOqRaBdsEmvpRNOayI8k4EVkEtitL5l6wducDOXk0rgQgfZqWf/ZX9DzXrHf257S5i9xTcISQ==}
 
   '@types/babel__core@7.20.5':
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
@@ -2425,8 +2419,6 @@ snapshots:
 
   '@rollup/rollup-win32-x64-msvc@4.22.2':
     optional: true
-
-  '@types/animejs@3.1.12': {}
 
   '@types/babel__core@7.20.5':
     dependencies:
