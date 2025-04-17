@@ -14,7 +14,7 @@ function App() {
 
 	return (
 		<div className="text-ctp-text bg-ctp-base text-4xl flex items-center justify-center min-h-screen w-screen">
-			<div className="w-fit h-fit m-24 flex flex-col gap-6 items-center justify-center rounded-lg p-10">
+			<div className="lg:scale-100 scale-150 w-fit h-fit m-24 flex flex-col gap-6 items-center justify-center rounded-lg p-10">
 				<h1>I'm s4mi, I make things (badly)</h1>
 				<div className='flex flex-row gap-4 h-fit'>
 					<LinkIcon icon={"pixelarticons:github"} url={"https://github.com/s4midev"}/>
