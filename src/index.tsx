@@ -18,6 +18,7 @@ function App() {
 				<h1>I'm s4mi, I make things (badly)</h1>
 				<div className='flex flex-row gap-4 h-fit'>
 					<LinkIcon icon={"pixelarticons:github"} url={"https://github.com/s4midev"}/>
+					<LinkIcon icon={"pixelarticons:volume-plus"} url={"https://www.last.fm/user/s4midev"}/>
 					<LinkIcon icon={"pixelarticons:chat"} url={"https://discordapp.com/users/1298435571395330108"}/>
 				</div>
 			</div>
