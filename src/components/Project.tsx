@@ -6,8 +6,8 @@ export function Project({ asset, name, blurb, url }) {
 			<img
 				src={`${
 					window.location.href.includes('s4mi.dev')
-						? '/public/assets/logos/'
-						: '/assets/logos/'
+						? '/assets/logos/'
+						: '/public/assets/logos/'
 				}${asset}`}
 				style={{
 					imageRendering: 'pixelated',
