@@ -72,19 +72,19 @@ function App() {
 						{[
 							{
 								name: 'Jellyfin',
-								asset: '/public/assets/logos/jellyfin.png',
+								asset: 'jellyfin.png',
 								blurb: 'The Free Software Media System',
 								url: 'https://jellyfin.org',
 							},
 							{
 								name: 'iPlayarr',
-								asset: '/public/assets/logos/iplayarr.png',
+								asset: 'iplayarr.png',
 								blurb: 'An *arr companion app for get_iplayer',
 								url: 'https://github.com/Nikorag/iplayarr',
 							},
 							{
 								name: 'Immich',
-								asset: '/public/assets/logos/immich.png',
+								asset: 'immich.png',
 								blurb: 'Self-hosted media management solution',
 								url: 'https://immich.app',
 							}
