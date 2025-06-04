@@ -7,7 +7,7 @@ export function LinkIcon({ icon, url }) {
 			className="h-fit w-fit cursor-pointer"
 			onClick={() => window.open(url, '_blank')}
 		>
-			<Icon icon={icon} height={34} width={34} />
+			<Icon icon={icon} height={32} width={32} />
 		</div>
 	);
 }

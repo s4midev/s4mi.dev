@@ -18,6 +18,7 @@ function hsvToRgb(h, s, v) {
 	];
 }
 
+// this is what inspired the very concept of sin
 export function snake(cvRef: HTMLCanvasElement) {
 	let hue = 0;
 
@@ -26,7 +27,7 @@ export function snake(cvRef: HTMLCanvasElement) {
 	const pixelScale = 20;
 
 	cvRef.width = window.innerWidth / pixelScale;
-	cvRef.height = window.innerHeight / pixelScale;
+	cvRef.height = document.documentElement.scrollHeight / pixelScale;
 
 	let y = -1;
 	let x = -1;

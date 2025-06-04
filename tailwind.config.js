@@ -6,4 +6,13 @@ module.exports = {
 			defaultFlavour: 'mocha',
 		}),
 	],
+	safelist: [
+		"bg-ctp-text",
+		"bg-ctp-mantle",
+		"h-1/2",
+		"h-1/3",
+		"h-1/4",
+		"h-1/5",
+		"h-1/6"
+	]
 };
