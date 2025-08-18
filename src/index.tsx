@@ -34,7 +34,7 @@ function App() {
 	return (
 		<div className="text-ctp-text bg-ctp-base flex justify-center items-center h-screen w-screen p-2 gap-2">
 			<Window width="40rem" title="about">
-				<img src="public/pfp.png" className="h-40 m-2" />
+				<img src="pfp.png" className="h-40 m-2" />
 				<div className="flex flex-col flex-grow gap-2 items-center justify-center text-xl">
 					<h1>hi, i'm s4mi :3</h1>
 					<h1>i'm a programmer and data hoarder from england</h1>
@@ -64,7 +64,7 @@ function App() {
 				</div>
 			</Window>
 			<Window width="8rem" title="cat" class="bottom-2 left-2">
-				<img src="/public/wires.png" />
+				<img src="wires.png" />
 			</Window>
 			<Window width="30rem" title="projects" class="bottom-6 right-8">
 				<div className="flex flex-col gap-2 w-full items-center justify-center p-2 text-3xl">
