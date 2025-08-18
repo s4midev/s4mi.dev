@@ -1,63 +1,109 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { ReactNode } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { snake } from './snake';
-import { LinkIcon } from './icons';
 import { Icon } from '@iconify-icon/react/dist/iconify.js';
 
-function App() {
-	const cvRef = useRef<HTMLCanvasElement>();
-
-	// cursed
-	useEffect(() => {
-		snake(cvRef.current);
-	}, []);
-
+function Window(props: {
+	title: string;
+	children?: ReactNode;
+	width: string;
+	class?: string;
+}) {
 	return (
-		<div className="text-ctp-text bg-ctp-base text-4xl flex items-center justify-center h-screen w-screen">
-			<div className="lg:scale-100 scale-150 w-fit h-fit m-24 flex flex-col gap-6 items-center justify-center rounded-lg p-10">
-				<h1>I'm s4mi, I make things</h1>
-				<div className="flex flex-row gap-4 h-fit">
-					<LinkIcon
+		<div
+			className={`flex flex-col w-fit h-fit flex justify-center items-center fixed ${props.class}`}
+		>
+			<div
+				className={`bg-ctp-mantle border-2 border-ctp-text h-fit flex flex-row justify-end`}
+				style={{ width: props.width }}
+			>
+				<h1 className="mr-auto text-2xl ml-2">{props.title}</h1>
+				<Icon icon={'pixelarticons:close-box'} height={'2rem'} />
+			</div>
+			<div
+				className={`bg-ctp-mantle border-2 border-t-0 border-ctp-text h-fit flex flex-row`}
+				style={{ width: props.width }}
+			>
+				{props.children}
+			</div>
+		</div>
+	);
+}
+
+function App() {
+	return (
+		<div className="text-ctp-text bg-ctp-base flex justify-center items-center h-screen w-screen p-2 gap-2">
+			<Window width="40rem" title="about">
+				<img src="public/pfp.png" className="h-40 m-2" />
+				<div className="flex flex-col flex-grow gap-2 items-center justify-center text-xl">
+					<h1>hi, i'm s4mi :3</h1>
+					<h1>i'm a programmer and data hoarder from england</h1>
+				</div>
+			</Window>
+			<Window width="20rem" title="links" class="top-10 right-14">
+				<div className="flex flex-row gap-2 w-full items-center justify-center p-2 text-4xl">
+					<Icon
 						icon={'pixelarticons:github'}
-						url={'https://github.com/s4midev'}
+						height={'2rem'}
+						className="cursor-pointer"
+						onClick={() =>
+							window.open('https://github.com/s4midev', '_blank')
+						}
 					/>
-					<LinkIcon
+					<Icon
 						icon={'pixelarticons:chat'}
-						url={'https://discordapp.com/users/1298435571395330108'}
+						height={'2rem'}
+						className="cursor-pointer"
+						onClick={() =>
+							window.open(
+								'https://discordapp.com/users/1298435571395330108',
+								'_blank'
+							)
+						}
 					/>
 				</div>
-			</div>
-			<canvas
-				ref={cvRef}
-				className="w-screen h-screen fixed z-10 pointer-events-none"
-				style={{
-					imageRendering: 'pixelated',
-				}}
-			/>
-			<div
-				className="absolute bottom-2 w-full flex flex-row items-center justify-center text-lg text-ctp-yellow cursor-pointer gap-4"
-				onClick={() => {
-					window.open(
-						'https://petition.parliament.uk/petitions/722903',
-						'_blank'
-					);
-				}}
-			>
-				<Icon
-					icon={'pixelarticons:warning-box'}
-					height={32}
-					width={32}
-				/>
-				<h1>
-					If you are in the UK, please consider signing this petition!
-				</h1>
-				<Icon
-					icon={'pixelarticons:warning-box'}
-					height={32}
-					width={32}
-				/>
-			</div>
+			</Window>
+			<Window width="8rem" title="cat" class="bottom-2 left-2">
+				<img src="/public/wires.png" />
+			</Window>
+			<Window width="30rem" title="projects" class="bottom-6 right-8">
+				<div className="flex flex-col gap-2 w-full items-center justify-center p-2 text-3xl">
+					<div
+						className="flex flex-row items-center gap-2 bg-ctp-crust h-20 w-full p-2 cursor-pointer"
+						onClick={() =>
+							window.open(
+								'https://github.com/s4midev/sugoi',
+								'_blank'
+							)
+						}
+					>
+						<Icon icon={'pixelarticons:clock'} height={'4rem'} />
+						<div className="flex flex-col justify-center p-2">
+							<h1>sugoi</h1>
+							<h1 className="text-xl">
+								a multi-use video summariser written in Go
+							</h1>
+						</div>
+					</div>
+					<div
+						className="flex flex-row items-center gap-2 bg-ctp-crust h-20 w-full p-2 cursor-pointer"
+						onClick={() =>
+							window.open(
+								'https://github.com/s4midev/goaway',
+								'_blank'
+							)
+						}
+					>
+						<Icon icon={'pixelarticons:movie'} height={'4rem'} />
+						<div className="flex flex-col justify-center p-2">
+							<h1>goaway</h1>
+							<h1 className="text-xl">
+								remove failed *arr downloads efficiently
+							</h1>
+						</div>
+					</div>
+				</div>
+			</Window>
 		</div>
 	);
 }
