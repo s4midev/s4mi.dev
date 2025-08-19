@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { Icon } from '@iconify-icon/react/dist/iconify.js';
+import DotGrid from './DotGrid';
 
 function Window(props: {
 	title: string;
@@ -32,7 +33,22 @@ function Window(props: {
 
 function App() {
 	return (
-		<div className="text-ctp-text bg-ctp-base flex justify-center items-center h-screen w-screen p-2 gap-2">
+		<div className="text-ctp-text bg-ctp-base flex justify-center items-center h-screen w-screen gap-2">
+			<div
+				style={{ width: '100%', height: '100%', position: 'static' }}
+			>
+				<DotGrid
+					dotSize={8}
+					gap={10}
+					baseColor="#313244"
+					activeColor="#cba6f7"
+					proximity={100}
+					shockRadius={300}
+					shockStrength={50}
+					resistance={500}
+					returnDuration={1.5}
+				/>
+			</div>
 			<Window width="40rem" title="about">
 				<img src="pfp.png" className="h-40 m-2" />
 				<div className="flex flex-col flex-grow gap-2 items-center justify-center text-xl">
@@ -40,7 +56,7 @@ function App() {
 					<h1>i'm a programmer and data hoarder from england</h1>
 				</div>
 			</Window>
-			<Window width="20rem" title="links" class="top-10 right-14">
+			<Window width="20rem" title="links" class="top-8 right-8">
 				<div className="flex flex-row gap-2 w-full items-center justify-center p-2 text-4xl">
 					<Icon
 						icon={'pixelarticons:github'}
@@ -63,10 +79,10 @@ function App() {
 					/>
 				</div>
 			</Window>
-			<Window width="8rem" title="cat" class="bottom-2 left-2">
+			<Window width="8rem" title="cat" class="bottom-8 left-8">
 				<img src="wires.png" />
 			</Window>
-			<Window width="30rem" title="projects" class="bottom-6 right-8">
+			<Window width="30rem" title="projects" class="bottom-8 right-8">
 				<div className="flex flex-col gap-2 w-full items-center justify-center p-2 text-3xl">
 					<div
 						className="flex flex-row items-center gap-2 bg-ctp-crust h-20 w-full p-2 cursor-pointer"
