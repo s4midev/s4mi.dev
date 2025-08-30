@@ -34,21 +34,6 @@ function Window(props: {
 function App() {
 	return (
 		<div className="text-ctp-text bg-ctp-base flex justify-center items-center h-screen w-screen gap-2">
-			<div
-				style={{ width: '100%', height: '100%', position: 'static' }}
-			>
-				<DotGrid
-					dotSize={8}
-					gap={10}
-					baseColor="#313244"
-					activeColor="#cba6f7"
-					proximity={100}
-					shockRadius={300}
-					shockStrength={50}
-					resistance={500}
-					returnDuration={1.5}
-				/>
-			</div>
 			<Window width="40rem" title="about">
 				<img src="pfp.png" className="h-40 m-2" />
 				<div className="flex flex-col flex-grow gap-2 items-center justify-center text-xl">
