@@ -35,20 +35,6 @@ function Window(props: {
 function App() {
 	return (
 		<div className="text-ctp-text bg-ctp-base flex justify-center items-center h-screen w-screen gap-2">
-			<Window
-				width="30rem"
-				title="kindly dni if you disagree"
-				class="top-8 left-8"
-			>
-				<div className="flex flex-col w-full items-center justify-center p-2 text-2xl">
-					<h1>trans rights are human rights</h1>
-					<h1>love is love</h1>
-					<h1>abortion is healthcare</h1>
-					<h1 className="mt-8 text-ctp-red font-bold">
-						i won't waste my time with fascists :)
-					</h1>
-				</div>
-			</Window>
 			<Window width="40rem" title="about">
 				<img src="pfp.png" className="h-40 m-2" />
 				<div className="flex flex-col flex-grow gap-2 items-center justify-center text-xl">
