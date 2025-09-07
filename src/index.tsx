@@ -12,13 +12,14 @@ function Window(props: {
 }) {
 	return (
 		<div
-			className={`flex flex-col w-fit h-fit flex justify-center items-center fixed ${props.class}`}
+			className={`flex flex-col w-fit h-fit justify-center items-center fixed ${props.class}`}
 		>
 			<div
 				className={`bg-ctp-mantle border-2 border-ctp-text h-fit flex flex-row justify-end`}
 				style={{ width: props.width }}
 			>
 				<h1 className="mr-auto text-2xl ml-2">{props.title}</h1>
+
 				<Icon icon={'pixelarticons:close-box'} height={'2rem'} />
 			</div>
 			<div
@@ -34,6 +35,20 @@ function Window(props: {
 function App() {
 	return (
 		<div className="text-ctp-text bg-ctp-base flex justify-center items-center h-screen w-screen gap-2">
+			<Window
+				width="30rem"
+				title="kindly dni if you disagree"
+				class="top-8 left-8"
+			>
+				<div className="flex flex-col w-full items-center justify-center p-2 text-2xl">
+					<h1>trans rights are human rights</h1>
+					<h1>love is love</h1>
+					<h1>abortion is healthcare</h1>
+					<h1 className="mt-8 text-ctp-red font-bold">
+						i won't waste my time with fascists :)
+					</h1>
+				</div>
+			</Window>
 			<Window width="40rem" title="about">
 				<img src="pfp.png" className="h-40 m-2" />
 				<div className="flex flex-col flex-grow gap-2 items-center justify-center text-xl">
@@ -73,16 +88,16 @@ function App() {
 						className="flex flex-row items-center gap-2 bg-ctp-crust h-20 w-full p-2 cursor-pointer"
 						onClick={() =>
 							window.open(
-								'https://github.com/s4midev/sugoi',
+								'https://github.com/s4midev/vensocket',
 								'_blank'
 							)
 						}
 					>
-						<Icon icon={'pixelarticons:clock'} height={'4rem'} />
+						<Icon icon={'pixelarticons:keyboard'} height={'4rem'} />
 						<div className="flex flex-col justify-center p-2">
-							<h1>sugoi</h1>
+							<h1>vensocket</h1>
 							<h1 className="text-xl">
-								a multi-use video summariser written in Go
+								A discord keybind reimplementation for linux
 							</h1>
 						</div>
 					</div>
