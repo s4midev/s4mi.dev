@@ -74,23 +74,6 @@ function App() {
 						className="flex flex-row items-center gap-2 bg-ctp-crust h-20 w-full p-2 cursor-pointer"
 						onClick={() =>
 							window.open(
-								'https://github.com/s4midev/vensocket',
-								'_blank'
-							)
-						}
-					>
-						<Icon icon={'pixelarticons:keyboard'} height={'4rem'} />
-						<div className="flex flex-col justify-center p-2">
-							<h1>vensocket</h1>
-							<h1 className="text-xl">
-								A discord keybind reimplementation for linux
-							</h1>
-						</div>
-					</div>
-					<div
-						className="flex flex-row items-center gap-2 bg-ctp-crust h-20 w-full p-2 cursor-pointer"
-						onClick={() =>
-							window.open(
 								'https://github.com/s4midev/goaway',
 								'_blank'
 							)
