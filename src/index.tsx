@@ -87,6 +87,23 @@ function App() {
 							</h1>
 						</div>
 					</div>
+					<div
+						className="flex flex-row items-center gap-2 bg-ctp-crust h-20 w-full p-2 cursor-pointer"
+						onClick={() =>
+							window.open(
+								'https://github.com/s4midev/vigil',
+								'_blank'
+							)
+						}
+					>
+						<Icon icon={'pixelarticons:eye'} height={'4rem'} />
+						<div className="flex flex-col justify-center p-2">
+							<h1>vigil</h1>
+							<h1 className="text-xl">
+								a lightweight golang based concert notifier 
+							</h1>
+						</div>
+					</div>
 				</div>
 			</Window>
 		</div>
