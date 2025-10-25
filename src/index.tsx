@@ -93,23 +93,6 @@ function App() {
 						className="flex flex-row items-center gap-2 bg-ctp-mantle h-20 w-full p-2 cursor-pointer"
 						onClick={() =>
 							window.open(
-								'https://github.com/s4midev/goaway',
-								'_blank'
-							)
-						}
-					>
-						<Icon icon={'pixelarticons:movie'} height={'4rem'} />
-						<div className="flex flex-col justify-center p-2">
-							<h1>goaway</h1>
-							<h1 className="text-xl">
-								remove failed *arr downloads efficiently
-							</h1>
-						</div>
-					</div>
-					<div
-						className="flex flex-row items-center gap-2 bg-ctp-mantle h-20 w-full p-2 cursor-pointer"
-						onClick={() =>
-							window.open(
 								'https://github.com/s4midev/vigil',
 								'_blank'
 							)
