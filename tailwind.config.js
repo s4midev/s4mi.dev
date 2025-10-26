@@ -13,6 +13,22 @@ module.exports = {
 		"h-1/3",
 		"h-1/4",
 		"h-1/5",
-		"h-1/6"
+		"h-1/6",
+		"w-64",
+		"w-18",
+		"max-w-18",
+		'border-ctp-rosewater',
+		'border-ctp-flamingo',
+		'border-ctp-pink',
+		'border-ctp-mauve',
+		'border-ctp-red',
+		'border-ctp-maroon',
+		'border-ctp-peach',
+		'border-ctp-yellow',
+		'border-ctp-green',
+		'border-ctp-teal',
+		'border-ctp-sky',
+		'border-ctp-sapphire',
+		'border-ctp-blue',
 	]
 };
